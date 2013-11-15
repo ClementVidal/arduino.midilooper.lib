@@ -3,6 +3,10 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_C_COMPILER avr-gcc)
 set(CMAKE_CXX_COMPILER avr-g++)
 
+cmake_minimum_required(VERSION 2.6)
+project(AruduinoCore)
+
+
 set(CSTANDARD "-std=gnu99")
 set(CDEBUG "-gstabs")
 set(CWARN "-Wall -Wstrict-prototypes")
@@ -18,10 +22,6 @@ set(CXXFLAGS "${CMCU} ${CDEFS} ${CINCS} ${COPT}")
 
 set(CMAKE_C_FLAGS ${CFLAGS})
 set(CMAKE_CXX_FLAGS ${CXXFLAGS})
-
-
-cmake_minimum_required (VERSION 2.6)
-project (AruduinoCore)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 

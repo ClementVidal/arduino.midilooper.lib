@@ -24,7 +24,7 @@ set(CMAKE_CXX_FLAGS ${CXXFLAGS})
 
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories("/home/cvidal/Dev/ArduinoLib/Install/include/Arduino")
+include_directories("/home/cvidal/Dev/ArduinoLib/install/include/Arduino")
 
 add_library( ArduinoMIDI MIDI.cpp )
 

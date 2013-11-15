@@ -24,7 +24,7 @@ cmake_minimum_required (VERSION 2.6)
 project (AruduinoSPI)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories("/home/cvidal/Dev/ArduinoLib/include/Arduino")
+include_directories("/home/cvidal/Dev/ArduinoLib/Install/include/Arduino")
 
 add_library( ArduinoSPI SPI.cpp )
 

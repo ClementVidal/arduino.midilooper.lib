@@ -1,2 +1,11 @@
+0.1.3:
+Remove unused main.cpp file
+
+0.1.2: 
+First release with operational build script.
+
+0.1.1: 
+Dummy release.
+
 0.1.0: 
 Initial release.

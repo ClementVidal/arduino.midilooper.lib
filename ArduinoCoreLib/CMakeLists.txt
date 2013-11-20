@@ -6,19 +6,15 @@ set(CMAKE_CXX_COMPILER avr-g++)
 cmake_minimum_required(VERSION 2.6)
 project(AruduinoCore)
 
-
-set(CSTANDARD "-std=gnu99")
-set(CDEBUG "-gstabs")
-set(CWARN "-Wall -Wstrict-prototypes")
-set(CTUNING "-funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums")
-set(COPT "-Os")
-set(CINCS "-I${Candi_SOURCE_DIR}/libarduino")
+set(COPT "-c -g -Os")
+set(CWARN "-Wall")
+set(CSECTION "-ffunction-sections -fdata-sections")
 set(CMCU "-mmcu=atmega328p")
-set(CDEFS "-DF_CPU=16000000")
+set(CDEFS "-DF_CPU=16000000L -MMD -DUSB_VID=null -DUSB_PID=null -DARDUINO=105")
+set(CXXTUNING "-fno-exceptions")
 
-
-set(CFLAGS "${CMCU} ${CDEBUG} ${CDEFS} ${CINCS} ${COPT} ${CWARN} ${CSTANDARD} ${CEXTRA}")
-set(CXXFLAGS "${CMCU} ${CDEFS} ${CINCS} ${COPT}")
+set(CFLAGS "${COPT} ${CWARN} ${CSECTIONS} ${CMCU} ${CDEFS}")
+set(CXXFLAGS "${COPT} ${CXXTUNING} ${CWARN} ${CSECTIONS} ${CMCU} ${CDEFS}")
 
 set(CMAKE_C_FLAGS ${CFLAGS})
 set(CMAKE_CXX_FLAGS ${CXXFLAGS})

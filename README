@@ -1,3 +1,7 @@
+Arduino MIDILooper :
+
+
+
 In order for the shell script build.sh to run properly you need to:
 
 - define and export ARDUINO_INSTALL 

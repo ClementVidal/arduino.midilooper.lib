@@ -4,7 +4,7 @@ set(CMAKE_C_COMPILER avr-gcc)
 set(CMAKE_CXX_COMPILER avr-g++)
 
 cmake_minimum_required(VERSION 2.6)
-project(AruduinoCore)
+project(AruduinoEEPROM)
 
 set(COPT "-c -Os")
 set(CWARN "-Wall")
@@ -20,8 +20,9 @@ set(CMAKE_C_FLAGS ${CFLAGS})
 set(CMAKE_CXX_FLAGS ${CXXFLAGS})
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories($ENV{ARDUINO_INCLUDE})
 
-add_library(ArduinoCore HardwareSerial.cpp HID.cpp IPAddress.cpp new.cpp Print.cpp Stream.cpp Tone.cpp USBCore.cpp WInterrupts.c wiring_analog.c wiring.c wiring_digital.c wiring_pulse.c wiring_shift.c WMath.cpp WString.cpp )
+add_library( ArduinoEEPROM EEPROM.cpp )
 
-install(TARGETS ArduinoCore ARCHIVE DESTINATION lib/static)
-install(FILES Arduino.h HardwareSerial.h IPAddress.h new.h Platform.h Printable.h Print.h Server.h Stream.h Udp.h USBAPI.h USBCore.h USBDesc.h WCharacter.h WString.h binary.h pins_arduino.h DESTINATION include/Arduino)
+install(TARGETS ArduinoEEPROM ARCHIVE DESTINATION lib/static)
+install(FILES EEPROM.h DESTINATION include/Arduino)

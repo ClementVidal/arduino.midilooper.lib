@@ -6,7 +6,7 @@ set(CMAKE_CXX_COMPILER avr-g++)
 cmake_minimum_required(VERSION 2.6)
 project(AruduinoSPIRAM)
 
-set(COPT "-c -g -Os")
+set(COPT "-c -Os")
 set(CWARN "-Wall")
 set(CSECTION "-ffunction-sections -fdata-sections")
 set(CMCU "-mmcu=atmega328p")

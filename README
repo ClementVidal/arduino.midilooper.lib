@@ -1,4 +1,4 @@
-Arduino MIDILooper :
+ArduinoLib :
 
 I. Prerequisies:
 
@@ -15,3 +15,7 @@ In order for the shell script build.sh to run properly you need to:
 - define and export ARDUINO_LIB (export ARDUINO_LIB="~/Dev/ArduinoLib/install/lib/static/")
  
 - run the script from where it is (and not from an other directory)
+
+Run:
+
+./build.sh

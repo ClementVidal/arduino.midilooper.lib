@@ -1,11 +1,17 @@
 Arduino MIDILooper :
 
+I. Prerequisies:
 
+sudo apt-get install cmake
+sudo apt-get install gcc-avr binutils-avr avr-libc
+
+
+II. Build :
 
 In order for the shell script build.sh to run properly you need to:
 
-- define and export ARDUINO_INSTALL 
-- define and export ARDUINO_INCLUDE
-- define and export ARDUINO_LIB
+- define and export ARDUINO_INSTALL (export ARDUINO_INSTALL="~/Dev/ArduinoLib/install")
+- define and export ARDUINO_INCLUDE (export ARDUINO_INCLUDE="~/Dev/ArduinoLib/install/include/Arduino")
+- define and export ARDUINO_LIB (export ARDUINO_LIB="~/Dev/ArduinoLib/install/lib/static/")
  
 - run the script from where it is (and not from an other directory)
